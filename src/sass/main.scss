@@ -1,0 +1,89 @@
+body {
+    font-family: "source-sans-pro", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+    overscroll-behavior: none;
+    position: relative;
+}
+
+#container {
+
+    width: 100%;
+    height: 100vh;
+}
+canvas{
+    display: block;
+}
+
+
+
+.annoSvg{
+    position: absolute;
+    z-index: 18;
+    width:30px;
+    height: 30px;
+    cursor: pointer;
+}
+.mybutton{
+    position:absolute;
+    z-index:18;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size:16px;
+    padding:3px 5px;
+  
+    &:hover{
+        transform: scale(1.2);
+        
+    }
+}
+
+.rightPanel {
+    background-color: rgb(158, 96, 216);
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -310px;
+    z-index: 19;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.51s ease;
+    color: white;
+    padding: 5px;
+    .close{
+     position: absolute;
+     top:10px;
+     right:20px;
+     color:white;
+     font-size: 20px;
+     font-weight: 700;   
+     width:25px;
+     height:25px;
+     transition:all 0.8s ease-out;
+     cursor: pointer;
+     &:hover{
+         transform: scale(1.2);
+         border:1px solid white;
+     }
+    }
+    &.active{
+        right: 0px;
+    }
+    @media (max-width:480px) {
+        width:200px;
+    }
+   
+
+}
+
+
+
